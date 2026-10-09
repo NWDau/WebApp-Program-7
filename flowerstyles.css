@@ -1,0 +1,8 @@
+.info{
+    background-color: white;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 500px;
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+}
