@@ -9,23 +9,28 @@
 
 
 
-#gamerField{
+
+#gameField{
     max-width: 600px;
     margin: 20px auto;
 }
 
 .row{
     display: flex;
-    justify-content: center;
     gap: 8px;
     margin-bottom: 8px; 
 }
 
+.location{
+    flex: 1;
+    min-width: 0;
+}
 
 .location img{
     display: block;
     width: 100%;
-    aspect-ratio: 1/1;
+    height: 65px;
     object-fit:cover;
     border: 2px solid purple;
+    box-sizing: border-box;
 }
