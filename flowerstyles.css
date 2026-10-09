@@ -6,3 +6,26 @@
     border: 2px solid lightgreen;
     border-radius: 10px;
 }
+
+
+
+#gamerField{
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px; 
+}
+
+
+.location img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit:cover;
+    border: 2px solid purple;
+}
