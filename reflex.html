@@ -31,7 +31,7 @@
     Halt
   </button>
   
-  <script> 
+<script> 
   let haltTime = undefined;
 
   function recordTime(){
@@ -41,7 +41,32 @@
 
   document.getElementById("halt").onclick = recordTime;
 
-  </script>
+  function beginTime(){
+    haltTime = undefined;
+
+    for(let i = 0; i <= 5; i++){
+      setTimeout(function(){
+          document.getElementById("countdown").innerHTML = i;
+      }, (5 - i) * 1000);
+    }
+  }
+
+  setTimeout(function(){
+    if(haltTime === undefinded){
+      document.getElementById("target").innerHTML= "Not soon enough";
+    } else{
+      let targetTime = Date.now();
+      let elapsedTime = haltTime - targetTime;
+
+      document.getElementById("target").innerHTMl= "Time was " + elapsedTime;
+      
+    }
+  }, 5000);
+
+  document.getElementById("go").onclick - beginTime;
+  document.getElementById("halt").onclick = recordTime;
+
+</script>
 
 </body>
 </html>
