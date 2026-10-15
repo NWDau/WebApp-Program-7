@@ -182,7 +182,7 @@
     let locationsVisited = 0;
     let lastLocation = 0;
 
-    function randomLocattions(){
+    function randomLocations(){
         let positions = [];
 
         for (let i = 0; i < 36; i++){
@@ -190,7 +190,7 @@
         }
 
         for (let i = positions.length - 1; i > 0; i--){
-            let j = Math.floor(Math.randomo() * (i * 1));
+            let j = Math.floor(Math.random() * (i * 1));
 
             let temp = positions[i];
             positions[i] = positions[j];
@@ -233,7 +233,7 @@
 
             if(roseLocation === playerPosition){
                 gameOver = true;
-                document.getLementById("help").innerHTML = "The rose caught you! Game Over."
+                document.getElementById("help").innerHTML = "The rose caught you! Game Over."
             }
 
             break;
@@ -292,7 +292,10 @@
             "score is " + score + ".";
 
         lastLocation = position;
-        moveRose(position);
+        if (!gameOver){
+            moveRose(position);
+        }
+        
 
     }
 
