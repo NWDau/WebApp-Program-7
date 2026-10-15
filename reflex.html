@@ -22,6 +22,8 @@
 
   <div id="counter">count</div>
 
+  <div id="countdown">Countdown Starts here</div>
+
   <button type="button" class="btn btn-primary" id="go">
     Go
   </button>
@@ -49,21 +51,22 @@
           document.getElementById("countdown").innerHTML = i;
       }, (5 - i) * 1000);
     }
-  }
-
-  setTimeout(function(){
+    setTimeout(function(){
     if(haltTime === undefined){
       document.getElementById("target").innerHTML= "Not soon enough";
     } else{
       let targetTime = Date.now();
       let elapsedTime = haltTime - targetTime;
 
-      document.getElementById("target").innerHTMl = "Time was " + elapsedTime;
+      document.getElementById("target").innerHTML = "Time was " + elapsedTime;
       
-    }
-  }, 5000);
+      }
+    }, 5000);
+  }
 
-  document.getElementById("go").onclick - beginTime;
+  
+
+  document.getElementById("go").onclick = beginTime;
   document.getElementById("halt").onclick = recordTime;
 
 </script>
