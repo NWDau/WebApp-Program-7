@@ -17,20 +17,27 @@
 		 background-color: green;
 	  }
 	}
+
+.divlist{
+	color: orange;
+}
 </style></head>
 
+<title>List of things</title>
 
+<h2>Dau builds list with divs</h2>
 
 <body>
 		<div class="flex-container" id="target">
-		  <div>row item 1</div>   
-		  <div>row item 2</div>  
-		  <div>row item 3</div>  
+		  <div class="divlist">row item 1</div>   
+		  <div class="divlist">row item 2</div>  
+		  <div class="divlist">row item 3</div>  
 		</div>
 	
 	<p> Press the button to create an new element of type div and then add it to the container.
 		</p>
-		<button onclick="makeNewDiv()">Add one</button>
+		<input type="text" id="itemInput">
+		<button onclick="makeNewDiv()">Add end</button>
 	
 	
 </body>
@@ -38,8 +45,11 @@
 	function makeNewDiv(){
 		/* make the div and its text */
 		let element = document.createElement("div")
-		element.innerHTML = "an item after 3"
-		element.style.color = "orange"
+
+		let inputValue = document.getElementById("itemInput").value;
+
+		element.innerHTML = inputValue;
+		element.className = "divlist";
 
 		/* add it to the container */
 		let container = document.getElementById('target')
