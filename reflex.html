@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>setTimeout use</title>
+  <title>Reflex reflex</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -14,27 +14,34 @@
   </head>
 <body>
 
-  <h2>Timeout - Red in 3 seconds</h2>
+  
 
-  <button type="button"
-  class="btn btn-primary"
-  onclick="buttonPress2()">
-  Click me change the color.</button>
+  <h2>Daus Reflex</h2>
+
+  <div id="target">Your time</div>
+
+  <div id="counter">count</div>
+
+  <button type="button" class="btn btn-primary" id="go">
+    Go
+  </button>
   
   <p id="target">I will become red </p>
+
+  <button type="button" class="btn btn-danger" id="halt">
+    Halt
+  </button>
   
   <script> 
-  function buttonPress1() {
-    setTimeout(function(){
-      document.getElementById('target').style.color = "red"
-    }, 3000)
+  let haltTime = undefined;
+
+  function recordTime(){
+    haltTime = Date.now();
+    console.log(haltTime);
   }
 
-  function buttonPress2() {
-    setTimeout(()=>{
-      document.getElementById('target').style.color = "red"
-    }, 3000)
-  }
+  document.getElementById("halt.onclick" = recordTime);
+
   </script>
 
 </body>
